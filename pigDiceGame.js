@@ -15,31 +15,25 @@ $("#rules").on("click", function(){
     });
 });
 
-function restartGame(){
-    $("#start-again-button").on("click", function(){
-        $("#button-game button").attr("disabled", false);
-        $("#score span").hide();
-        scorePlayerOne = 0;
-        $("#score-1").html(scorePlayerOne);
-        scorePlayerTwo = 0;
-        $("#score-2").html(scorePlayerTwo);
-    });
-}
-
+$("#start-again-button").on("click", function(){
+    $("#button-game button").attr("disabled", false);
+    $("#score span").hide();
+    scorePlayerOne = 0;
+    $("#score-1").html(scorePlayerOne);
+    scorePlayerTwo = 0;
+    $("#score-2").html(scorePlayerTwo);
+});
 
 function winner(){
     if(scorePlayerOne >= 100){
         $("#button-game button").attr("disabled", true);
         $("#score #winner-1").fadeIn(500);
-        restartGame();
     }
     else if(scorePlayerTwo >= 100){
         $("#button-game button").attr("disabled", true);
         $("#score #winner-2").fadeIn(500);
-        restartGame();
     }
 }
-
 
 function passTurn(){
     $("#pass-turn").on("click", function(){
@@ -54,23 +48,18 @@ function passTurn(){
     });
 }
 
-
 function playerOneTurn(){
     $("#players #player-one").css("color", "red");
     $("#players #player-two").css("color", "black");
 }
-
 
 function playerTwoTurn(){
     $("#players #player-one").css("color", "black");
     $("#players #player-two").css("color", "red");
 }
 
-
 function gameLogic(){
     $("#roll-dice").on("click", function(){
-        const myDice = $("#dice-img img");
-
         let diceOne = (Math.floor(Math.random() * 6 + 1));
         let diceTwo = (Math.floor(Math.random() * 6 + 1));
 
@@ -95,14 +84,12 @@ function gameLogic(){
 
         else if(diceOne == 1 && diceTwo == 1){
             if(playerOne == true){
-                //playerOneTurn();
                 scorePlayerOne = 0;
                 playerOne = false;
                 $("#score-1").html(scorePlayerOne);
                 playerTwoTurn();
             }
             else{
-                //playerTwoTurn();
                 scorePlayerTwo = 0
                 playerOne = true
                 $("#score-2").html(scorePlayerTwo);
@@ -120,17 +107,11 @@ function gameLogic(){
 
         else{
             if(playerOne == true){
-                //playerOneTurn();
-                //scorePlayerOne = scorePlayerOne;
                 playerOne = false;
-                //$("#score-1").html(scorePlayerOne);
                 playerTwoTurn();
             }
             else{
-                //playerTwoTurn();
-                //scorePlayerTwo = scorePlayerTwo;
                 playerOne = true;
-                //$("#score-2").html(scorePlayerTwo);
                 playerOneTurn();
             }
         }
@@ -139,4 +120,3 @@ function gameLogic(){
 
 gameLogic();
 passTurn();
-restartGame();
