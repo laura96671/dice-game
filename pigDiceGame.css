@@ -1,0 +1,80 @@
+#title {
+    text-align: center;
+    font-size: 20px;
+}
+
+#pig-game-box {
+    margin: 150px;
+    margin-top: auto;
+    text-align: center;
+}
+
+#ouch {
+    display: none; 
+    margin-top: 10px;
+    font-weight: 500;
+    color: red;
+}
+
+/* Rules Section */
+#rules { 
+    text-align: left;
+    margin-left: 180px;
+ }
+#rules h2 { cursor: pointer; }
+ #rules i { margin-right: 10px; 
+            color: #946c00;
+            cursor: pointer; 
+}
+div ul { 
+    display: inline-block;
+    text-align: left;
+    list-style-position: inside; 
+    list-style-type: disc;
+}
+
+/* Game Buttons Section */
+#button-game {
+    position: relative;
+    display: block;
+    margin: auto;
+}
+#start-again-button { margin-bottom: 20px; }
+.fa-arrow-rotate-left { margin-bottom: 20px; color: #946c00}
+
+/* Dice Section */
+#dice p {
+    padding: 10px;
+    display: inline-block;
+}
+#dice img { width: 110px; }
+#dice-img { display: none; }
+#dice-random-1 {
+    display: inline-block;
+    margin-right: 20px;
+}
+#dice-random-2 { display: inline-block; }
+
+/* Players Section */
+#players {display: flex;}
+#players article:first-of-type { flex: 4;}
+#players article:nth-of-type(even) { position: relative; flex: 2; justify-content: center; }
+#players article:last-of-type { flex: 4;}
+#players h2 { font-size: 40px; }
+
+/* Score Section */
+#score {display: flex;
+        margin-bottom: 20px;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: center;
+}
+#score article:first-of-type { margin-top: 50px; flex: 4;}
+#score article:nth-of-type(even) { position: relative; flex: 2; justify-content: center; }
+#score article:last-of-type { margin-top: 50px; flex: 4;}
+#score h3 { font-size: 50px; }
+#score span {
+    display: none;
+    color:red;
+    font-size: 30px;
+}

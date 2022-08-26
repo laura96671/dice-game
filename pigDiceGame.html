@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9087a0b4c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="pigDiceGame.css" rel="stylesheet">
+
+    <title>The Pig Dice Game</title>
+</head>
+<body>
+
+<div class="box" id="title">
+    <h1>Pig Dice Game</h1>
+</div>
+
+<div id="rules">
+    <span class="icon-text">
+        <span class="icon">
+            <i id="plus-symbol" class="fa-solid fa-plus"></i>
+            <h2>RULES</h2>
+        </span>
+    </span>
+    <br>
+    <ul>
+        <li>Two standard dice are rolled. If neither shows a 1, their sum is added to the turn total.</li>
+        <li>If a single 1 is rolled, the player scores nothing and the turn ends.</li>
+        <li>If two 1s are rolled, the player’s entire score is lost, and the turn ends.</li>
+        <li>As soon as one of the two players reaches a score of 100 wins.</li>
+    </ul>
+</div>
+<br>
+
+<div id="pig-game-box" class="box">
+
+    <div id="players">
+        <article id="player-one">
+            <h2>PLAYER 1</h2>
+        </article>
+        <article>
+            <span class="icon-text">
+                <span class="icon">
+                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                    <button class="button is-white" id="start-again-button" type="submit">NEW GAME</button>
+                </span>
+              </span>
+        </article>
+        <article>
+        <article id="player-two">
+            <h2>PLAYER 2</h2>
+        </article>
+    </div>
+
+    <div id="dice-img">
+        <img id="img-1" src="img/dice_1.png">
+        <img id="img-2" src="img/dice_2.png">
+        <img id="img-3" src="img/dice_3.png">
+        <img id="img-4" src="img/dice_4.png">
+        <img id="img-5" src="img/dice_5.png">
+        <img id="img-6" src="img/dice_6.png">
+    </div>
+    
+    <div id="score">
+        <article>
+            <h3 id="score-1">0</h3>
+            <span id="winner-1">Winner!</span>
+        </article>
+        <article>
+            <div id="dice">
+                <p id="random-1"><img src="img/dice_1.png"></img></p>
+                <p id="random-2"><img src="img/dice_3.png"></img></p>
+            </div>
+        </article>
+        <br>
+
+        <article>
+            <h3 id="score-2">0</h3>
+            <span id="winner-2">Winner!</span>
+        </article>
+    </div>
+
+    <div class="buttons" id="button-game">
+        <button class="button is-success is-light" id="roll-dice" type="submit" value="Roll">ROLL DICE</button>
+        <button class="button is-warning is-light" id="pass-turn" type="submit" value="Hold">HOLD</button>
+    </div>
+
+    <h4 id="ouch">OUCH!!</h4>
+
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="pigDiceGame.js"></script>
+    
+</body>
+</html>
