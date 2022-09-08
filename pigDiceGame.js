@@ -7,10 +7,10 @@ $("#rules ul").hide();
 $("#rules").on("click", function(){ 
     $("#rules ul").fadeToggle(function(){
         if($("#rules ul").is(":visible")){
-            $("#rules i").attr("class", "fa-solid fa-minus")
+            $("#rules i").attr("class", "fa-solid fa-minus");
         }
         else{
-            $("#rules i").attr("class", "fa-solid fa-plus")
+            $("#rules i").attr("class", "fa-solid fa-plus");
         }
     });
 });
@@ -38,7 +38,7 @@ function winner(){
 function passTurn(){
     $("#pass-turn").on("click", function(){
         if(playerOne == true){
-            playerTwoTurn()
+            playerTwoTurn();
             playerOne = false;
         }
         else{
@@ -90,15 +90,15 @@ function gameLogic(){
                 playerTwoTurn();
             }
             else{
-                scorePlayerTwo = 0
-                playerOne = true
+                scorePlayerTwo = 0;
+                playerOne = true;
                 $("#score-2").html(scorePlayerTwo);
                 playerOneTurn();
             }
 
             setTimeout(function(){
                 $("#ouch").fadeIn(200, function(){
-                    $("#ouch").css("display", "block")
+                    $("#ouch").css("display", "block");
                     $("#ouch").fadeOut(200);
                 });
             }, 0);
@@ -106,14 +106,8 @@ function gameLogic(){
         }
 
         else{
-            if(playerOne == true){
-                playerOne = false;
-                playerTwoTurn();
-            }
-            else{
-                playerOne = true;
-                playerOneTurn();
-            }
+            playerOne ? playerOne = false : playerOne = true
+            playerOne ? playerTwoTurn() : playerOneTurn()
         }
     });
 }
