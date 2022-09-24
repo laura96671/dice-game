@@ -10,7 +10,7 @@ Web application that generates two random numbers and returns specific instructi
 Play ----> https://resonant-crisp-360b83.netlify.app/ 
 <img width="1664" alt="pig-dice-game" src="https://user-images.githubusercontent.com/106548240/191202330-44173b79-1629-45f8-80dd-8484aab07998.png">
 
-# Built with:
+# Technology Stack
 <li>HTML
 <li>CSS
 <li>JavaScript
